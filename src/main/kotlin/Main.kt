@@ -1,14 +1,14 @@
-fun main() {
-    println(calculationCommission(10_000)) // Ожидаемый результат - 0
-    println(calculationCommission(20_000)) // Ожидаемый результат - Превышен лимит перевода
-    println(calculationCommission(10_000, amountOfTransfersMonth = 40_000)) // Ожидаемый результат - Превышен лимит перевода за месяц
-    println(calculationCommission(10_000, "MasterCard")) // Ожидаемый результат - 0
-    println(calculationCommission(10_000, "MasterCard", 75_001)) // Ожидаемый результат - 80
-    println(calculationCommission(10, "Visa")) // Ожидаемый результат - 35
-    println(calculationCommission(10_000, "Мир")) // Ожидаемый результат - 75
-    println(calculationCommission(160_000, "MasterCard"))  // Ожидаемый результат - Превышен лимит перевода
-    println(calculationCommission(15_000, "Мир", 590_000)) // Ожидаемый результат - Превышен лимит перевода за месяц
-}
+//fun main() {
+//    println(calculationCommission(10_000)) // Ожидаемый результат - 0
+//    println(calculationCommission(20_000)) // Ожидаемый результат - Превышен лимит перевода
+//    println(calculationCommission(10_000, amountOfTransfersMonth = 40_000)) // Ожидаемый результат - Превышен лимит перевода за месяц
+//    println(calculationCommission(10_000, "MasterCard")) // Ожидаемый результат - 0
+//    println(calculationCommission(10_000, "MasterCard", 75_001)) // Ожидаемый результат - 80
+//    println(calculationCommission(10, "Visa")) // Ожидаемый результат - 35
+//    println(calculationCommission(10_000, "Мир")) // Ожидаемый результат - 75
+//    println(calculationCommission(160_000, "MasterCard"))  // Ожидаемый результат - Превышен лимит перевода
+//    println(calculationCommission(15_000, "Мир", 590_000)) // Ожидаемый результат - Превышен лимит перевода за месяц
+//}
 
 fun calculationCommission(amountTransfer: Int, cardType: String = "VK Pay", amountOfTransfersMonth: Int = 0) =
     when (cardType) {

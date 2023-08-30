@@ -28,7 +28,7 @@ fun commissionMastercardMaestro(amountTransfer: Int, amountOfTransfersMonth: Int
 
 fun commissionVisaMir(amount: Int): Int {
     val commission = 0.75
-    val commissionMin = 35
+    val commissionMin = 55 // Было 35 - поломка автотестов
 
     return if (amount * commission / 100 > commissionMin) (amount * commission / 100).toInt() else commissionMin
 }
